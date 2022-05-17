@@ -11,6 +11,8 @@ import PrivateRoute from './auth/PrivateRoute';
 import { privateRoute } from './Route/privateRoutes';
 import AdminRoute from './auth/AdminRoute';
 import Dashboard from './pages/Dashboard/Dashboard';
+import AddService from './pages/Dashboard/AddService';
+import AddAdmin from './pages/Dashboard/AddAdmin';
 AOS.init();
 
 function App() {
@@ -39,7 +41,10 @@ function App() {
             }
           </Route>
           <Route element={<AdminRoute/>}>
-            <Route path='/dashboard' element={<Dashboard/>}></Route>
+            <Route path='/dashboard' element={<Dashboard/>}>
+                <Route path='add-service' element={<AddService/>}></Route>
+                <Route path='add-admin' element={<AddAdmin/>}></Route>
+            </Route>
           </Route>
         </Routes>
       </Navbar>

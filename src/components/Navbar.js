@@ -27,7 +27,7 @@ const Navbar = ({ children }) => {
                             <ul className="menu menu-horizontal gap-x-2">
                                 {/* <!-- Navbar menu content here --> */}
                                 <li><NavLink to='/' className='rounded-lg'>Home</NavLink></li>
-                                {admin && <li><NavLink to='/dashboard' className='rounded-lg'>Dashboard</NavLink></li>}
+                                {admin && <li><NavLink to='/dashboard/add-service' className='rounded-lg'>Dashboard</NavLink></li>}
                                 <li><NavLink to='/services' className='rounded-lg'>Services</NavLink></li>
                                 <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink></li>
                                 <li><NavLink to='/about' className='rounded-lg'>About</NavLink></li>
@@ -55,7 +55,7 @@ const Navbar = ({ children }) => {
                     <ul className="menu p-4 overflow-y-auto w-52 gap-y-1 bg-base-100">
                         {/* <!-- Sidebar content here --> */}
                         <li><NavLink to='/' className='rounded-lg btn-sm'>Home</NavLink></li>
-                        {admin && <li><NavLink to='/dashboard' className='rounded-lg'>Dashboard</NavLink></li>}
+                        {admin && <li><NavLink to='/dashboard/add-service' className='rounded-lg'>Dashboard</NavLink></li>}
                         <li><NavLink to='/services' className='rounded-lg btn-sm'>Services</NavLink></li>
                         <li><NavLink to='/contact' className='rounded-lg btn-sm'>Contact</NavLink></li>
                         <li><NavLink to='/about' className='rounded-lg btn-sm'>About</NavLink></li>
