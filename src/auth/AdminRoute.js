@@ -4,9 +4,9 @@ import useAdmin from '../hooks/useAdmin';
 
 const AdminRoute = () => {
     const [admin] = useAdmin();
-    const location = useLocation()
+    // const location = useLocation()
     if (!admin) {
-        return <Navigate to='/login' state={{ from: location }} replace />
+        return <Navigate to='/' replace/>
     }
     return <Outlet />
 };

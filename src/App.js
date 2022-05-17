@@ -9,6 +9,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import PrivateRoute from './auth/PrivateRoute';
 import { privateRoute } from './Route/privateRoutes';
+import AdminRoute from './auth/AdminRoute';
+import Dashboard from './pages/Dashboard/Dashboard';
 AOS.init();
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
             {
               privateRoute.map(({ path, Component }, index) => <Route key={index} path={path} element={<Component />}></Route>)
             }
+          </Route>
+          <Route element={<AdminRoute/>}>
+            <Route path='/dashboard' element={<Dashboard/>}></Route>
           </Route>
         </Routes>
       </Navbar>

@@ -1,18 +1,17 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import DashboardSidebar from '../../components/DashboardSidebar';
+import AddAdmin from './AddAdmin';
+import AddService from './AddService';
 
 const Dashboard = () => {
     return (
-        <div>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-            <h1>This is dashboard</h1>
-        </div>
+        <DashboardSidebar>
+            <Routes>
+                <Route path='add-service' element={<AddService/>}></Route>
+                <Route path='add-admin' element={<AddAdmin/>}></Route>
+            </Routes>
+        </DashboardSidebar>
     );
 };
 
